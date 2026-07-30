@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ChevronRight, Play, Zap, Shield, Gauge, Trophy } from 'lucide-react';
 
 export default function AstonMartinAMR26B() {
@@ -47,12 +48,16 @@ export default function AstonMartinAMR26B() {
           </button>
         </div>
 
-        {/* Hero Banner / Silhouette Placeholder */}
-        <div className="mt-16 w-full max-w-5xl h-[350px] md:h-[500px] rounded-2xl bg-gradient-to-b from-neutral-900 to-black border border-white/10 relative overflow-hidden flex items-center justify-center">
+        {/* Hero Banner / Car Image */}
+        <div className="mt-16 w-full max-w-5xl h-[350px] md:h-[500px] rounded-2xl bg-gradient-to-b from-neutral-900 to-black border border-white/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-950/30 via-transparent to-transparent" />
-          <span className="text-neutral-700 font-mono text-sm tracking-widest uppercase">
-            [ Imagem do AMR26B em Alta Resolução ]
-          </span>
+          <Image
+            src="/amr26b.svg"
+            alt="Aston Martin AMR26B F1 Car"
+            fill
+            className="object-contain p-8"
+            priority
+          />
         </div>
       </section>
 

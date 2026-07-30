@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="600" cy="400" rx="400" ry="180" fill="url(#carGradient)" opacity="0.6" />
+
+  <!-- Main chassis/body group -->
+  <g transform="translate(600, 300)">
+    
+    <!-- Front wing - top element -->
+    <path d="M -280 -80 L -240 -100 L 240 -100 L 280 -80 Z" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="2"/>
+    
+    <!-- Front nose cone -->
+    <path d="M -200 -40 L -180 20 L 180 20 L 200 -40 Z" fill="#059669" opacity="0.6" stroke="#10b981" stroke-width="1.5"/>
+    
+    <!-- Cockpit area - driver seat region -->
+    <ellipse cx="0" cy="-20" rx="120" ry="60" fill="#047857" opacity="0.5" stroke="#10b981" stroke-width="1.5"/>
+    
+    <!-- Main body - sleek aerodynamic shape -->
+    <path d="M -200 20 Q -240 40, -260 80 Q -280 120, -270 160 Q -240 180, -180 190 L 180 190 Q 240 180, 270 160 Q 280 120, 260 80 Q 240 40, 200 20 Z" 
+          fill="#1f2937" opacity="0.8" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+    
+    <!-- Air intake on side (racing detail) -->
+    <rect x="-220" y="50" width="40" height="60" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="1" rx="4"/>
+    <rect x="180" y="50" width="40" height="60" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="1" rx="4"/>
+    
+    <!-- Rear wing support (DRS element) -->
+    <path d="M -180 150 L -170 200 L 170 200 L 180 150 Z" fill="#059669" opacity="0.4" stroke="#10b981" stroke-width="1.5"/>
+    
+    <!-- Rear wing elements -->
+    <path d="M -160 200 L -140 240 L 140 240 L 160 200 Z" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+    <path d="M -150 250 L -120 280 L 120 280 L 150 250 Z" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="1.5"/>
+    
+    <!-- Left wheel -->
+    <circle cx="-140" cy="170" r="40" fill="#1a1a1a" stroke="#10b981" stroke-width="2" opacity="0.9"/>
+    <circle cx="-140" cy="170" r="35" fill="none" stroke="#059669" stroke-width="1" opacity="0.5"/>
+    <circle cx="-140" cy="170" r="30" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Right wheel -->
+    <circle cx="140" cy="170" r="40" fill="#1a1a1a" stroke="#10b981" stroke-width="2" opacity="0.9"/>
+    <circle cx="140" cy="170" r="35" fill="none" stroke="#059669" stroke-width="1" opacity="0.5"/>
+    <circle cx="140" cy="170" r="30" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Exhaust elements (rear detail) -->
+    <rect x="-60" y="190" width="20" height="40" fill="#f97316" opacity="0.4" rx="3"/>
+    <rect x="40" y="190" width="20" height="40" fill="#f97316" opacity="0.4" rx="3"/>
+    
+    <!-- Light effects -->
+    <ellipse cx="-170" cy="-30" rx="25" ry="18" fill="#fbbf24" opacity="0.3" filter="url(#glow)"/>
+    <ellipse cx="170" cy="-30" rx="25" ry="18" fill="#fbbf24" opacity="0.3" filter="url(#glow)"/>
+    
+    <!-- Brake glow effect (red accent on wheels) -->
+    <circle cx="-140" cy="170" r="42" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.2" stroke-dasharray="5,5"/>
+    <circle cx="140" cy="170" r="42" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.2" stroke-dasharray="5,5"/>
+    
+  </g>
+
+  <!-- Airflow lines (speed effect) -->
+  <g opacity="0.3" stroke="#10b981" stroke-width="1" fill="none" stroke-dasharray="10,5">
+    <path d="M 100 150 Q 300 120, 500 140"/>
+    <path d="M 100 350 Q 300 330, 500 320"/>
+    <path d="M 100 450 Q 300 480, 500 460"/>
+  </g>
+  
+  <!-- Additional airflow lines from right -->
+  <g opacity="0.2" stroke="#10b981" stroke-width="1" fill="none" stroke-dasharray="10,5">
+    <path d="M 1100 150 Q 900 120, 700 140"/>
+    <path d="M 1100 350 Q 900 330, 700 320"/>
+    <path d="M 1100 450 Q 900 480, 700 460"/>
+  </g>
+
+</svg>
